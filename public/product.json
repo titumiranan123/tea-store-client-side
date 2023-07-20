@@ -1,0 +1,51 @@
+[
+    {
+      "coverImage": "https://img.freepik.com/free-vector/organic-peppermint-herbal-tea-ad_52683-32757.jpg?w=740&t=st=1688095019~exp=1688095619~hmac=28737f092a5ff74e5601447d1ef29a61768393c5287a310c55a2c7852cd38e61",
+      "image": "https://img.freepik.com/free-photo/black-sweet-raisins-dried-sweet-grapes-surface_176474-411.jpg?w=996&t=st=1688095320~exp=1688095920~hmac=24ae5135e3a2c106d5abcf6dee9f9ccde9676149f2067b0f63b2d5ad25ac61f4",
+      "discount": 0.15,
+      "rating": 4.2,
+      "title": "Chamomile Botanical Blend Sachets",
+      "price": 49.99
+    },
+    {
+      "coverImage": "https://img.freepik.com/premium-vector/herbal-tea-chamomile-organic-natural-drink_87689-4840.jpg?w=360",
+      "image": "https://img.freepik.com/free-photo/top-view-insects-sliced-lemons_23-2148225904.jpg?size=626&ext=jpg&uid=R107965459&ga=GA1.2.183239943.1687765645&semt=ais",
+      "discount": 0.1,
+      "rating": 4.5,
+      "title": "Organic Dandelion & Peach Naturally ",
+      "price": 29.99
+    },
+    {
+      "coverImage": "https://img.freepik.com/premium-vector/chamomile-tea-bag-ad_317396-1756.jpg?w=360",
+      "image": "https://img.freepik.com/free-photo/chamomile-tea-cup-arrangement_23-2148786594.jpg?w=740&t=st=1688112911~exp=1688113511~hmac=64d0282867e22d4dafc4e28c9fb0cc508be6cf88d39a7c130b323461f16ddd1c",
+      "discount": 0.2,
+      "rating": 4.8,
+      "title": "Chamomile Blend Oraagnic Tea ",
+      "price": 79.99
+    },
+    {
+      "coverImage": "https://img.freepik.com/free-vector/organic-peppermint-herbal-tea-ad_52683-32757.jpg?w=740&t=st=1688095019~exp=1688095619~hmac=28737f092a5ff74e5601447d1ef29a61768393c5287a310c55a2c7852cd38e61",
+      "image": "https://img.freepik.com/free-photo/black-sweet-raisins-dried-sweet-grapes-surface_176474-411.jpg?w=996&t=st=1688095320~exp=1688095920~hmac=24ae5135e3a2c106d5abcf6dee9f9ccde9676149f2067b0f63b2d5ad25ac61f4",
+      "discount": 0.15,
+      "rating": 4.2,
+      "title": "Chamomile Botanical Blend Sachets",
+      "price": 49.99
+    },
+    {
+      "coverImage": "https://img.freepik.com/premium-vector/herbal-tea-chamomile-organic-natural-drink_87689-4840.jpg?w=360",
+      "image": "https://img.freepik.com/free-photo/top-view-insects-sliced-lemons_23-2148225904.jpg?size=626&ext=jpg&uid=R107965459&ga=GA1.2.183239943.1687765645&semt=ais",
+      "discount": 0.1,
+      "rating": 4.5,
+      "title": "Organic Dandelion & Peach Naturally ",
+      "price": 29.99
+    },
+    {
+      "coverImage": "https://img.freepik.com/premium-vector/chamomile-tea-bag-ad_317396-1756.jpg?w=360",
+      "image": "https://img.freepik.com/free-photo/chamomile-tea-cup-arrangement_23-2148786594.jpg?w=740&t=st=1688112911~exp=1688113511~hmac=64d0282867e22d4dafc4e28c9fb0cc508be6cf88d39a7c130b323461f16ddd1c",
+      "discount": 0.2,
+      "rating": 4.8,
+      "title": "Chamomile Blend Oraagnic Tea ",
+      "price": 79.99
+    }
+  ]
+
