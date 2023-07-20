@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import logo from '../../../assets/logo.png'
+import logo from '../../../assets/logo.jpg'
 import { FaShoppingBag, FaShoppingCart, FaSistrix } from "react-icons/fa";
 import { HiMenuAlt1 ,HiOutlineArrowSmDown} from "react-icons/hi";
 import { AuthContext } from '../../Providers/Authprovider';
@@ -12,7 +12,7 @@ const Navbar = () => {
   
   const [toggole, setToggole] = useState(false)
   const {user, logOut} = useContext(AuthContext)
-  console.log(user)
+
   const navigate = useNavigate()
   const [, data] = useCart();
   
@@ -56,7 +56,7 @@ const [isAdmin,]= useAdmin();
     <nav className='shadow-2xl  rounded z-10'>
       <div className=" hidden  lg:flex px-10 items-center ">
         <div>
-          <img src={logo} className='h-[80px] w-[100px]' alt="" />
+          <img src={logo} className='h-[50px] w-[70px] rounded-lg' alt="" />
         </div>
         <div className='flex mx-auto'>
           {navItem}
@@ -91,7 +91,7 @@ const [isAdmin,]= useAdmin();
             }
           </div>
           <div className='mx-auto'>
-            <img src={logo} className='h-[80px] w-[100px]' alt="" />
+            <img src={logo} className='h-[50px] w-[70px] rounded-lg' alt="" />
           </div>
           <div className=''>
             {

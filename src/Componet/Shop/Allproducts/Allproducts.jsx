@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 const Allproducts = () => {
     const [data, setData] = useState([])
     const { category } = useParams()
-    console.log(category)
     useEffect(() => {
         fetch('https://tea-store-server-side.vercel.app/products')
             .then(res => res.json())
