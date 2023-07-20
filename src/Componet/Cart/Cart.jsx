@@ -36,7 +36,7 @@ const Cart = () => {
         })
     };
 
-    const handleUpdate = (id) => {
+    const handlepay = (id) => {
         console.log(id);
     };
     console.log(data)
@@ -66,9 +66,9 @@ const Cart = () => {
                         </button>
                         <button
                             className="bg-blue-500 text-white px-3 py-2 rounded"
-                            onClick={() => handleUpdate(item._id)}
+                            onClick={() => handlepay(item._id)}
                         >
-                            Update
+                            Pay
                         </button>
                     </div>
                 </div>

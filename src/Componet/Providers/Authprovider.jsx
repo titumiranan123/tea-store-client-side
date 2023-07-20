@@ -44,12 +44,9 @@ const Authprovider = ({ children }) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
-            setLoading(false)
-            console.log('current user', currentUser);
             if (currentUser) {
                 axios.post(`https://tea-store-server-side.vercel.app/jwt`, { email: currentUser.email })
                     .then(data => {
-
                         localStorage.setItem('access-token', data.data.token)
                         setLoading(false)
                     })
@@ -57,12 +54,6 @@ const Authprovider = ({ children }) => {
             else {
                 localStorage.removeItem('access-token')
             }
-
-            return () => {
-                return unsubscribe();
-            }
-
-
         });
         return () => {
             return unsubscribe();
