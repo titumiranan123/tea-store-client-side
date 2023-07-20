@@ -12,9 +12,9 @@ const Login = () => {
         e.preventDefault()
 
         const form = e.target;
-        const password = form.password.value;
         const email = form.email.value;
-        console.log(name, email)
+        const password = form.password.value;
+        console.log(password, email)
         signIn(email, password)
             .then(res => {
                 Swal.fire({
