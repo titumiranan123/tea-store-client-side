@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../Providers/Authprovider";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 
 
@@ -168,12 +168,12 @@ const Signup = () => {
                         </button>
 
                     </div>
-                    <a
+                    <Link
                         className="inline-block align-baseline font-semibold hover:underline text-sm text-blue-500 hover:text-blue-800"
-                        href="#"
+                        to={'/singin'}
                     >
                         Already have an account? Sign In
-                    </a>
+                    </Link>
                 </form>
                 <div className="flex justify-center items-center mt-10">
                     <button onClick={googleLogin} className="py-1 px-4 bg-green-600 hover:bg-green-800 text-center rounded-lg flex justify-center items-center gap-4">Login With Google<FaGoogle /></button>

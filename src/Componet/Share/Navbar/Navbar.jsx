@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../../assets/logo.jpg'
@@ -37,7 +38,8 @@ const Navbar = () => {
       }
   })
   }
-const [isAdmin,]= useAdmin();
+const [isAdmin, isAdminLoading]= useAdmin();
+console.log(isAdmin)
 // const isAdmin = false;
   
   const navItem = <>
