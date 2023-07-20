@@ -10,6 +10,7 @@ import Cart from '../Cart/Cart';
 import Privaterout from './Privaterout';
 import Dashbord from '../Admin/Dashbord/Dashbord';
 import User from '../Admin/User/User';
+import AdminRoute from './Adminroutes';
 // import Prement from '../Prament/Prement';
 
 
@@ -85,11 +86,11 @@ const routes = createBrowserRouter([
     },
     {
         path: 'dashbord',
-        element: <Dashbord />,
+        element: <AdminRoute><Dashbord /></AdminRoute>,
         children: [
             {
                 path: 'user',
-                element: <User />
+                element: <AdminRoute><User /></AdminRoute>
             }
         ]
     },

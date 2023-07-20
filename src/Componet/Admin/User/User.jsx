@@ -3,13 +3,12 @@ import Swal from "sweetalert2";
 import useAxiosSecure from "../../UseAxiosSecure/useAxiosSecure";
 
 const User = () => {
-    const axiosSecure = useAxiosSecure()
+    const [axiosSecure] = useAxiosSecure()
     const { data: users = [], refetch } = useQuery(
         {
             queryKey: ['users'],
             queryFn: async () => {
                 const response = await axiosSecure.get(`/users`);
-
                 return response.data;
             }
         }

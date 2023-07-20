@@ -1,22 +1,23 @@
 /* eslint-disable react/prop-types */
 import { useContext } from "react";
-import { AuthContext } from "../Providers/Authprovider";
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router";
+import useAdmin from "../Customhook/useAdmin";
 
-const Adminroutes = ({ children }) => {
-    const { user, loading } = useContext(AuthContext)
 
-    if (loading) {
-        return <>
-            <div className="flex justify-center items-center h-screen">
-                <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-purple-500"></div>
-            </div>
-        </>;
+
+const AdminRoute = ({ children }) => {
+    const { user, loading } = useContext();
+    const [isAdmin, isAdminLoading] = useAdmin();
+    const location = useLocation();
+
+    if (loading || isAdminLoading) {
+        return <progress className="progress w-56"></progress>
     }
-    if (user) {
+
+    if (user && isAdmin) {
         return children;
     }
-    return <Navigate to='/login'></Navigate>
+    return <Navigate to="/" state={{ from: location }} replace></Navigate>
 };
 
-export default Adminroutes;
+export default AdminRoute;
