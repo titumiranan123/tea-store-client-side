@@ -1,21 +1,27 @@
+
 import { loadStripe } from "@stripe/stripe-js";
-import SectionTitle from "../../../components/SectionTitle/SectionTitle";
-import CheckoutForm from "./CheckoutForm";
+
 import { Elements } from "@stripe/react-stripe-js";
-import useCart from "../../../hooks/useCart";
+import CheckoutForm from "./Checkoutform";
+import useCart from "../Customhook/useCart";
+
+
 
 // TODO: provide publishable Key
 const stripePromise = loadStripe(import.meta.env.VITE_Payment_Gateway_PK);
 const Payment = () => {
-    const [cart] = useCart();
-    const total = cart.reduce((sum, item) => sum + item.price, 0);
-    const price = parseFloat(total.toFixed(2))
+    const [, data] = useCart();
+    console.log(data)
+    const total = data?.reduce((sum, item) => sum + item.price, 0);
+    console.log(total)
+    const price = parseFloat(total?.toFixed(2))
     return (
-        <div>
-            <SectionTitle subHeading="please process" heading="Payment"></SectionTitle>
-            <h2 className="text-3xl"> Teka o teka tumi uira uira aso...</h2>
+        <div className="flex flex-col border shadow-lg border-slate-500 bg-slate-300">
+            <h2 className="text-3xl text-center pt-20">Prement Complete Here</h2>
             <Elements stripe={stripePromise}>
-                <CheckoutForm cart={cart} price={price}></CheckoutForm>
+
+                <CheckoutForm data={data} price={price} ></CheckoutForm>
+
             </Elements>
         </div>
     );

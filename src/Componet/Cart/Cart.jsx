@@ -5,6 +5,9 @@ import Swal from "sweetalert2";
 const Cart = () => {
     const [refetch, data] = useCart();
 
+    const total = data.reduce((sum, item) => sum + item.price, 0);
+    console.log(total)
+    const price = parseFloat(total.toFixed(2))
 
     const handleDelete = (id) => {
 
@@ -36,9 +39,9 @@ const Cart = () => {
         })
     };
 
-    const handlepay = (id) => {
-        console.log(id);
-    };
+    // const handlepay = (id) => {
+    //     console.log(id);
+    // };
     console.log(data)
     if (!data) {
         return <div className="h-screen flex flex-col justify-center items-center text-4xl">
@@ -48,6 +51,20 @@ const Cart = () => {
     }
     return (
         <div className=" min-h-screen">
+            <div className="px-10 mt-10 mb-10 flex justify-between items-center">
+                <div>
+                    <p>Total Cart : {data.length}</p>
+                </div>
+                <div>
+                    <p>Total Price : {price} $</p>
+                </div>
+                <Link to='/payment'><button
+                    className="bg-blue-500 text-white px-3 py-2 rounded"
+                >
+                    Pay
+                </button></Link>
+
+            </div>
             {data.map(item => <div key={item._id} className="bg-white rounded-lg shadow-lg p-4 lg:flex justify-center gap-10 items-center flex-wrap lg:flex-nowrap md:flex-nowrap  md:flex">
                 <div className="md:w-2/5">
                     <img src={item.image} alt={item.name} className="w-[100px] h-[100px] object-cover rounded-lg" />
@@ -64,12 +81,7 @@ const Cart = () => {
                         >
                             Delete
                         </button>
-                        <button
-                            className="bg-blue-500 text-white px-3 py-2 rounded"
-                            onClick={() => handlepay(item._id)}
-                        >
-                            Pay
-                        </button>
+
                     </div>
                 </div>
             </div>)}

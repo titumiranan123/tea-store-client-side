@@ -11,6 +11,8 @@ import Privaterout from './Privaterout';
 import Dashbord from '../Admin/Dashbord/Dashbord';
 import User from '../Admin/User/User';
 import AdminRoute from './Adminroutes';
+import Payment from '../Prament/Prement';
+import ProductForm from '../Admin/Poductadd/Productadd';
 // import Prement from '../Prament/Prement';
 
 
@@ -82,6 +84,11 @@ const routes = createBrowserRouter([
                 element: <div> vegan-teas</div>
 
             },
+            {
+                path: 'payment',
+                element: <Payment />
+
+            },
         ]
     },
     {
@@ -91,8 +98,17 @@ const routes = createBrowserRouter([
             {
                 path: 'user',
                 element: <AdminRoute><User /></AdminRoute>
-            }
+            },
+            {
+                path: 'product-mannagement',
+                element: <AdminRoute><ProductForm /></AdminRoute>
+            },
         ]
+    },
+    {
+        path: 'payment',
+        element: <Payment />
+
     },
 
 ])
